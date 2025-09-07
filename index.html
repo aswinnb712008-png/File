@@ -3,107 +3,196 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
+  <title>Aswin N B | Portfolio</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    /* Reset */
+    * {
       margin: 0;
       padding: 0;
-      background: #f5f5f5;
-      color: #333;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #fdfdfd;
+      color: #222;
+      line-height: 1.7;
+    }
+
     header {
-      background: #4a90e2;
+      background: linear-gradient(135deg, #008080, #006666);
       color: white;
-      padding: 20px;
+      padding: 50px 20px 100px; /* extra bottom padding */
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
+
     header img {
       width: 120px;
       height: 120px;
-      border-radius: 50%; /* Makes it circular */
-      border: 3px solid white;
-      margin-bottom: 10px;
+      border-radius: 50%;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+      transition: all 0.6s ease;
+      position: relative;
     }
+
+    header.scrolled img {
+      position: fixed;
+      top: 15px;
+      left: 20px;
+      width: 60px;
+      height: 60px;
+      border: 2px solid #fff;
+      margin: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      transition: opacity 0.5s ease;
+    }
+
+    header.scrolled h1,
+    header.scrolled p {
+      opacity: 0; /* Hide text when pic moves */
+    }
+
+    header p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-top: 5px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
     section {
-      padding: 20px;
-      max-width: 800px;
-      margin: auto;
+      margin-bottom: 40px;
     }
+
     h2 {
-      color: #4a90e2;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
+      font-size: 1.5rem;
+      color: #006666;
+      margin-bottom: 12px;
+      border-bottom: 2px solid #e5e5e5;
+      padding-bottom: 6px;
     }
+
+    p {
+      font-size: 1rem;
+      color: #444;
+    }
+
     ul {
-      list-style-type: square;
-      margin-left: 20px;
+      list-style: none;
+      margin-top: 10px;
     }
+
+    ul li {
+      padding: 8px 0;
+      border-bottom: 1px solid #eee;
+      font-size: 1rem;
+    }
+
+    .contact {
+      margin-top: 15px;
+    }
+
     .contact a {
       display: inline-block;
-      margin-right: 15px;
-      text-decoration: none;
-      color: #4a90e2;
-      font-weight: bold;
-    }
-    footer {
-      background: #222;
+      background: #008080;
       color: white;
+      padding: 10px 18px;
+      margin-right: 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: background 0.3s ease;
+    }
+
+    .contact a:hover {
+      background: #004d4d;
+    }
+
+    footer {
+      background: #006666;
+      color: #eee;
       text-align: center;
-      padding: 10px;
-      margin-top: 20px;
+      padding: 20px;
+      font-size: 0.9rem;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <!-- Profile Picture -->
-    <img src= "profile1.jpg" alt="Profile Picture">
-
+  <header id="header">
+    <img src="profile1.jpg" alt="Profile Picture">
     <h1>ASWIN N B</h1>
     <p>Welcome to my personal website!</p>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      I'm <b>Aswin N. B</b>, a Computer Science student at GHSS Karuvanpoyil. Beyond the classroom, 
-      I enjoy exploring my passions—whether it's playing football, diving into gaming, 
-      or honing my skills as a beginner programmer. I'm always curious to learn, grow, 
-      and take on new challenges that shape both my personal and technical journey.
-    </p>
-  </section>
+  <main>
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I'm <b>Aswin N. B</b>, a Computer Science student at GHSS Karuvanpoyil. 
+        Beyond the classroom, I enjoy exploring my passions--whether it's playing football, 
+        diving into gaming, or honing my skills as a beginner programmer. 
+        I'm always curious to learn, grow, and take on new challenges that shape 
+        both my personal and technical journey.
+      </p>
+    </section>
 
-  <section>
-    <h2>Hobbies</h2>
-    <ul>
-      <li>Playing Football</li>
-      <li>Gamer</li>
-      <li>Stencil Artist</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Hobbies</h2>
+      <ul>
+        <li>Playing Football</li>
+        <li>Gamer</li>
+        <li>Stencil Artist</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Interests</h2>
-    <ul>
-      <li>Technology</li>
-      <li>Traveling</li>
-      <li>Music</li>
-      <li>Sports</li>
-    </ul>
-  </section>
+    <section>
+      <h2>Interests</h2>
+      <ul>
+        <li>Technology</li>
+        <li>Traveling</li>
+        <li>Music</li>
+        <li>Sports</li>
+      </ul>
+    </section>
 
-  <section>
-    <h2>Contact</h2>
-    <div class="contact">
-      <a href="mailto:aswinnb712008@gmail.com">Email</a>
-      <a href="https://www.instagram.com/pvt_as.w.inee?igsh=bmVjaTFrMzB5ZDVz" target="_blank">Instagram</a>
-      <a href="tel:+9526655371">Phone</a>
-    </div>
-  </section>
+    <section>
+      <h2>Contact</h2>
+      <div class="contact">
+        <a href="mailto:aswinnb712008@gmail.com">Email</a>
+        <a href="https://www.instagram.com/pvt_as.w.inee?igsh=bmVjaTFrMzB5ZDVz" target="_blank">Instagram</a>
+        <a href="tel:+9526655371">Phone</a>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Aswin N. B | All Rights Reserved</p>
   </footer>
+
+  <script>
+    const header = document.getElementById('header');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 100) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
 </body>
-</html> 
+</html>
